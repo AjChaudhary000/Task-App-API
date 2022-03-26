@@ -4,9 +4,9 @@ const auth = require('../MiddleWare/auth');
 const User = require('../Model/UserModel');
 const router = new express.Router();
 const path = require('path')
-const sharp = require('sharp')
 const fs = require('fs')
 router.post('/user', async (req, res) => {
+ 
     const UserData = new User(req.body);
     try {
         await UserData.save();
